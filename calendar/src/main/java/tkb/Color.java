@@ -1,5 +1,8 @@
 package tkb;
- // Trình Nguyễn
+
+import java.util.Random;
+
+// Trình Nguyễn
 public class Color {
     
     //  References: 
@@ -90,4 +93,13 @@ public class Color {
             System.out.println("\u001B[0m");
         }
     }
+    //random color
+    public static String randomColor() {
+        Random rand = new Random();
+        int r = rand.nextInt(256);
+        int g = rand.nextInt(256);
+        int b = rand.nextInt(256);
+        return makeColor(r, g, b);
+    }
+
 }
